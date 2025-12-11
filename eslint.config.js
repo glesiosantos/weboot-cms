@@ -34,7 +34,8 @@ export default [
       '@typescript-eslint/no-explicit-any': 'off',
       'vue/max-attributes-per-line': 'off',
       'vue/singleline-html-element-content-newline': 'off',
-      'vue/multiline-html-element-content-newline': 'off'
+      'vue/multiline-html-element-content-newline': 'off',
+      'no-undef': 'off'
     }
   },
 
