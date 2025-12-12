@@ -3,4 +3,9 @@ import './style.css'
 import router from './router'
 import App from './App.vue'
 
-createApp(App).use(router).mount('#app')
+import VueApexCharts from 'vue3-apexcharts'
+
+const app = createApp(App)
+app.use(router)
+app.use(VueApexCharts)
+app.mount('#app')
