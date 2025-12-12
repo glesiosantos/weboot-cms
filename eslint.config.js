@@ -35,6 +35,7 @@ export default [
       'vue/max-attributes-per-line': 'off',
       'vue/singleline-html-element-content-newline': 'off',
       'vue/multiline-html-element-content-newline': 'off',
+      'no-unused-vars': 'off',
       'no-undef': 'off'
     }
   },

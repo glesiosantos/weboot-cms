@@ -1,78 +1,35 @@
 <template>
   <div class="p-6 space-y-6">
-    <!-- ===== Header ===== -->
-    <div class="flex items-center justify-between mb-6">
-      <div>
-        <h1 class="text-3xl font-bold text-gray-800">Network Overview</h1>
-        <p class="text-gray-500">
-          System status and connected devices statistics
-        </p>
-      </div>
-      <button
-        class="px-4 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90"
-      >
-        Refresh Data
-      </button>
-    </div>
-
-    <!-- ===== Cards ===== -->
+    <!-- Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <DashboardCard
-        title="Total Users"
-        value="1,024"
-        icon="users"
-        color="primary"
-      />
-
-      <DashboardCard
-        title="Active Devices"
-        value="342"
-        icon="cpu"
-        color="blue"
-      />
-
-      <DashboardCard
-        title="CPU Load"
-        value="54%"
-        icon="activity"
-        color="yellow"
-      />
-
-      <DashboardCard
-        title="Network Traffic"
-        value="2.4GB"
-        icon="wifi"
-        color="green"
-      />
-    </div>
-
-    <!-- ===== Main Graph ===== -->
-    <div class="bg-white shadow rounded-xl p-6">
-      <h2 class="text-lg font-semibold mb-4">Network Activities</h2>
-      <NetworkChart />
-    </div>
-
-    <!-- ===== Bottom Section ===== -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <!-- Pie Chart -->
-      <div class="bg-white shadow rounded-xl p-6">
-        <h2 class="text-lg font-semibold mb-4">Device Usage</h2>
-        <DevicePieChart />
+      <div class="p-6 bg-white shadow rounded-lg">
+        <p class="text-gray-500">Total Vendas</p>
+        <p class="text-2xl font-bold mt-2">R$ 24.590</p>
       </div>
 
-      <!-- Device List -->
-      <div class="col-span-2 bg-white shadow rounded-xl p-6">
-        <h2 class="text-lg font-semibold mb-4">Connected Devices</h2>
-
-        <DeviceList />
+      <div class="p-6 bg-white shadow rounded-lg">
+        <p class="text-gray-500">Usuários</p>
+        <p class="text-2xl font-bold mt-2">1.263</p>
       </div>
+
+      <div class="p-6 bg-white shadow rounded-lg">
+        <p class="text-gray-500">Tickets</p>
+        <p class="text-2xl font-bold mt-2">189</p>
+      </div>
+
+      <div class="p-6 bg-white shadow rounded-lg">
+        <p class="text-gray-500">Conversões</p>
+        <p class="text-2xl font-bold mt-2">7%</p>
+      </div>
+    </div>
+
+    <!-- Chart placeholder -->
+    <div
+      class="bg-white p-6 shadow rounded-lg h-80 flex items-center justify-center text-gray-400"
+    >
+      (gráfico aqui)
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
-import DashboardCard from '@/components/DashboardCard.vue'
-import NetworkChart from '@/components/NetworkChart.vue'
-import DevicePieChart from '@/components/DevicePieChart.vue'
-import DeviceList from '@/components/DeviceList.vue'
-</script>
+<script setup lang="ts"></script>
