@@ -64,6 +64,7 @@
 
           <!-- User avatar -->
           <div class="relative">
+            fdsfas
             <img
               src="https://i.pravatar.cc/100"
               class="h-10 w-10 rounded-full border cursor-pointer"
