@@ -1,22 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'class', // Modo escuro ativado com 'class'
+  content: ['./index.html', './src/**/*.{vue,js,ts}'],
   theme: {
     extend: {
       colors: {
-        primary: '#2a4fd7',
-        success: '#34c38f',
-        orange: '#fa7f56',
-        info: '#35d1df',
-        warning: '#e4a73e',
-        danger: '#fa3452',
-        purple: '#6f42c1',
-        light: '#f5f6f8',
-        secondary: '#74788d',
-        dark: '#343a40'
+        primary: '#727cf5',
+        secondary: '#6c757d',
+        success: '#0acf97',
+        info: '#39afd1',
+        warning: '#ffbc00',
+        danger: '#fa5c7c',
+        dark: '#313a46',
+        muted: '#98a6ad',
+        light: '#f1f5f7',
+        sidebar: {
+          DEFAULT: '#313a46',
+          hover: '#3a4453',
+          active: '#4a5362'
+        }
       }
     }
-  },
-  plugins: []
+  }
 }

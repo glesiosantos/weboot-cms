@@ -12,7 +12,7 @@
     >
       <Header @toggle-sidebar="collapsed = !collapsed" />
 
-      <main>
+      <main class="p-6 overflow-auto">
         <slot />
         <RouterView />
       </main>
@@ -26,5 +26,5 @@ import Header from '@/components/admin/HeaderApp.vue'
 import Sidebar from '@/components/admin/SidebarApp.vue'
 import type { RouterView } from 'vue-router'
 
-const collapsed = ref(false)
+const collapsed = ref(true)
 </script>

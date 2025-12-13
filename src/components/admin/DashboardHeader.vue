@@ -9,3 +9,11 @@
     </button>
   </div>
 </template>
+<script lang="ts" setup>
+import feather from 'feather-icons'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  feather.replace()
+})
+</script>

@@ -1,35 +1,20 @@
 <template>
-  <div class="p-6 space-y-6">
-    <!-- Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="p-6 bg-white shadow rounded-lg">
-        <p class="text-gray-500">Total Vendas</p>
-        <p class="text-2xl font-bold mt-2">R$ 24.590</p>
-      </div>
+  <div class="space-y-6">
+    <DashboardCards />
+    <DashboardCharts />
 
-      <div class="p-6 bg-white shadow rounded-lg">
-        <p class="text-gray-500">Usuários</p>
-        <p class="text-2xl font-bold mt-2">1.263</p>
-      </div>
-
-      <div class="p-6 bg-white shadow rounded-lg">
-        <p class="text-gray-500">Tickets</p>
-        <p class="text-2xl font-bold mt-2">189</p>
-      </div>
-
-      <div class="p-6 bg-white shadow rounded-lg">
-        <p class="text-gray-500">Conversões</p>
-        <p class="text-2xl font-bold mt-2">7%</p>
-      </div>
-    </div>
-
-    <!-- Chart placeholder -->
-    <div
-      class="bg-white p-6 shadow rounded-lg h-80 flex items-center justify-center text-gray-400"
-    >
-      (gráfico aqui)
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <DashboardActivities class="lg:col-span-1" />
+      <DashboardTopSellers class="lg:col-span-1" />
+      <DashboardRecentOrders class="lg:col-span-1" />
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup>
+import DashboardCards from '@/components/admin/DashboardCards.vue'
+import DashboardCharts from '@/components/admin/DashboardCharts.vue'
+import DashboardActivities from '@/components/admin/DashboardActivities.vue'
+import DashboardTopSellers from '@/components/admin/DashboardTopSellers.vue'
+import DashboardRecentOrders from '@/components/admin/DashboardRecentOrders.vue'
+</script>

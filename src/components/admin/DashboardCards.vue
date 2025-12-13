@@ -1,24 +1,78 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-    <div class="bg-white p-5 rounded shadow border">
-      <h3 class="text-gray-500 text-sm">Usuários Ativos</h3>
-      <p class="text-3xl font-bold mt-2">1.240</p>
-    </div>
-
-    <div class="bg-white p-5 rounded shadow border">
-      <h3 class="text-gray-500 text-sm">Vendas Hoje</h3>
-      <p class="text-3xl font-bold mt-2">R$ 4.200</p>
-    </div>
-
-    <div class="bg-white p-5 rounded shadow border">
-      <h3 class="text-gray-500 text-sm">Novas Ordens</h3>
-      <p class="text-3xl font-bold mt-2">32</p>
-    </div>
-
-    <div class="bg-white p-5 rounded shadow border">
-      <h3 class="text-gray-500 text-sm">Taxa de Retenção</h3>
-      <p class="text-3xl font-bold mt-2">92%</p>
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+    <DashboardStatCard v-for="card in cards" :key="card.label" v-bind="card" />
   </div>
 </template>
-<script setup lang="ts"></script>
+
+<script setup lang="ts">
+import DashboardStatCard from '@/components/admin/DashboardStatCard.vue'
+
+const cards = [
+  {
+    label: 'Revenue',
+    value: '$5,820',
+    percent: '+38%',
+    period: 'Last Month',
+    icon: 'database',
+    iconBg: 'bg-primary/10',
+    iconColor: 'text-primary',
+    titleColor: 'text-primary',
+    percentColor: 'text-success',
+
+    chart: {
+      series: [
+        {
+          name: 'Revenue',
+          data: [10, 18, 15, 25, 22, 30, 28, 40]
+        }
+      ],
+      options: {
+        chart: { sparkline: { enabled: true } },
+        stroke: { curve: 'smooth', width: 2 },
+        fill: {
+          type: 'gradient',
+          gradient: { opacityFrom: 0.4, opacityTo: 0.1 }
+        },
+        colors: ['#727cf5'],
+        tooltip: { enabled: false }
+      }
+    }
+  },
+
+  {
+    label: 'Orders',
+    value: '1,250',
+    percent: '+12%',
+    period: 'This Week',
+    icon: 'shopping-bag',
+    iconBg: 'bg-success/10',
+    iconColor: 'text-success',
+    titleColor: 'text-success',
+    percentColor: 'text-success'
+  },
+
+  {
+    label: 'Customers',
+    value: '4,500',
+    percent: '+8%',
+    period: 'This Month',
+    icon: 'users',
+    iconBg: 'bg-info/10',
+    iconColor: 'text-info',
+    titleColor: 'text-info',
+    percentColor: 'text-success'
+  },
+
+  {
+    label: 'Growth',
+    value: '12%',
+    percent: '-2%',
+    period: 'Last Month',
+    icon: 'trending-up',
+    iconBg: 'bg-warning/10',
+    iconColor: 'text-warning',
+    titleColor: 'text-warning',
+    percentColor: 'text-danger'
+  }
+]
+</script>
