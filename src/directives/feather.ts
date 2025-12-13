@@ -1,20 +1,11 @@
 import feather from 'feather-icons'
+import type { Directive } from 'vue'
 
-export default {
-  mounted(el) {
-    const icon = el.getAttribute('data-feather')
-    if (icon && feather.icons[icon]) {
-      el.innerHTML = feather.icons[icon].toSvg({
-        class: el.getAttribute('class') || ''
-      })
-    }
+export const featherDirective: Directive = {
+  mounted() {
+    feather.replace()
   },
-  updated(el) {
-    const icon = el.getAttribute('data-feather')
-    if (icon && feather.icons[icon]) {
-      el.innerHTML = feather.icons[icon].toSvg({
-        class: el.getAttribute('class') || ''
-      })
-    }
+  updated() {
+    feather.replace()
   }
 }
