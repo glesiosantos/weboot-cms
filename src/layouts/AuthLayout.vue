@@ -7,7 +7,11 @@
       >
         <!-- Left logo/title -->
         <div class="flex items-center gap-3">
-          <img src="/logo.png" alt="Logo" class="w-8 h-8 object-contain" />
+          <img
+            src="../assets/logo.png"
+            alt="Logo"
+            class="w-8 h-8 object-contain"
+          />
           <h1 class="text-xl font-semibold text-[#2d3436]">Weboot CMS</h1>
         </div>
 
