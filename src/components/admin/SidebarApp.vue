@@ -12,20 +12,24 @@
     <nav class="p-4">
       <ul class="space-y-2">
         <li>
-          <a
+          <routerLink
+            :to="{ name: 'dashboard' }"
             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-200 transition"
             href="#"
           >
             <i data-feather="home" class="w-5 h-5" />
             <span v-if="!collapsed">Dashboard</span>
-          </a>
+          </routerLink>
         </li>
 
         <li>
-          <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-200">
-            <i data-feather="layers" class="w-5 h-5" />
-            <span v-if="!collapsed">Apps</span>
-          </a>
+          <routerLink
+            :to="{ name: 'users' }"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-200"
+          >
+            <i data-feather="users" class="w-5 h-5" />
+            <span v-if="!collapsed">Usuários</span>
+          </routerLink>
         </li>
 
         <li>
